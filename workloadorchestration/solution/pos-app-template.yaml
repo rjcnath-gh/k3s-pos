@@ -1,0 +1,12 @@
+schema:
+  name: pos-app-schema
+  version: 1.0.0
+configs:
+  AppName: pos-app
+  DeploymentName: POSAppDeploy
+  StoreId: ${{$val(StoreId)}}
+  PaymentGatewayId: ${{$val(PaymentGatewayId)}}
+  ReceiptPrinterIP: ${{$val(ReceiptPrinterIP)}}
+  ReceiptPrinterModel: ${{$val(ReceiptPrinterModel)}}
+  LocalTaxRate: ${{$val(LocalTaxRate)}}
+  ApplicationDNSEndpoint: ${{$val(ApplicationDNSEndpoint)}}
