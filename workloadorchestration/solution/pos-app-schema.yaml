@@ -1,31 +1,45 @@
 metadata:
-  name: app-schema
+  name: pos-app-schema
   version: 1.0.0
 rules:
   configs:
-      ApplicationEndpoint:
+      StoreId:
+        type: int
+        required: true
+        editableAt:
+          - line
+        editableBy:
+          - OT
+      PaymentGatewayId:
         type: string
         required: true
         editableAt:
           - line
         editableBy:
           - OT
-      HealthCheckEndpoint:
+      ReceiptPrinterModel:
         type: string
-        required: false
+        required: true
         editableAt:
           - line
         editableBy:
           - OT
-      ErrorThreshold:
+      ReceiptPrinterIP:
+        type: string
+        required: true
+        editableAt:
+          - line
+        editableBy:
+          - OT
+      LocalTaxRate:
         type: float
         required: true
         editableAt:
           - line
         editableBy:
           - OT
-      EnableLocalLog:
-        type: boolean
+      ApplicationDNSEndpoint:
+        type: string
         required: true
         editableAt:
           - line
